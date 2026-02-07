@@ -1,0 +1,61 @@
+# CodeRabbit Configuration
+
+# Language settings
+language: en-US
+
+# Review settings
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: true
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - main
+      - master
+      - dev
+
+# Path-based instructions
+path_instructions:
+  - path: "**/*.{js,ts,jsx,tsx}"
+    instructions: |
+      - Focus on code quality, security, and performance
+      - Check for proper error handling
+      - Verify type safety where applicable
+      - Look for potential bugs and edge cases
+  
+  - path: "**/*.{py}"
+    instructions: |
+      - Check for PEP 8 compliance
+      - Verify proper error handling
+      - Look for security vulnerabilities
+      - Check for performance issues
+  
+  - path: "**/*.{css,scss}"
+    instructions: |
+      - Check for responsive design issues
+      - Verify accessibility compliance
+      - Look for optimization opportunities
+
+# Chat settings
+chat:
+  auto_reply: true
+
+# Knowledge base
+knowledge_base:
+  learnings:
+    scope: auto
+
+# Enable early access features
+early_access: true
+
+# Tone and behavior
+tone_instructions: |
+  - Be constructive and helpful
+  - Prioritize critical issues first
+  - Provide code examples when suggesting changes
+  - Be concise but thorough
